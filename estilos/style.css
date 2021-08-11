@@ -1,5 +1,9 @@
 body{
     font-family: 'Roboto', sans-serif;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .barra-topo{
@@ -17,4 +21,49 @@ body{
     top:0;
     left:0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.criar-quiz{
+    width: 80%;
+    height: 181px;
+    margin-top: 90px;
+    background-color: #FAFAFA;
+    border: 1px dashed #D5D5D5;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #B9B9B9;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.criar-quiz > span{
+    width:80%;
+    display: flex;
+    align-items: center;  
+    margin-bottom: 10px;
+}
+
+.botao-criar-quiz{
+   width: 136px;
+   height: 40px;
+   color: #EC362D;
+   font-size: 21px;
+   margin-top: 10px;
+   font-weight: 400;
+   text-align: center;
+   border: 1px dashed #EC362D;
+   box-sizing: border-box;
+   border-radius: 50px;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+}
+
+@media(max-width:1100px){
+
 }
