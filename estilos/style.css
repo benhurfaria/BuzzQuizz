@@ -76,17 +76,35 @@ body > span{
     flex-direction: column;
     margin-bottom: 30px;
 }
-.todos-os-quizes li{
+body li{
     width: 340px;
     height: 181px;
     background-color: red;
     margin-top: 20px;
     border-radius: 5px;
 }
-.todos-os-quizes ul{
+.seus-quizes{
+    width: 70%;
+}
+
+body ul{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+.mini-menu{
+    width: 150px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ion-icon{
+    color:red;
+    font-size: 30px;
+    cursor: pointer;
+}
+.seus-quizes{
+    margin-top:90px;
 }
 @media(max-width:1100px){
     .criar-quiz{
@@ -96,7 +114,7 @@ body > span{
         width: 90%;
     }
     
-    .todos-os-quizes ul{
+    body ul{
         justify-content: center;
         flex-direction: column;
         align-items: center;
@@ -104,7 +122,21 @@ body > span{
     body > span{
         width: 90%;
     }
-    .todos-os-quizes li{
+    body li{
         width: 325px;
     }
+    .mini-menu{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+    }
+    .seus-quizes{
+        width: 90%;
+        font-size: 20px;
+    }
+}
+.escondido{
+    display: none;
 }
