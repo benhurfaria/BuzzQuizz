@@ -76,7 +76,7 @@ body > span{
     flex-direction: column;
     margin-bottom: 30px;
 }
-body li{
+.lista-quizz li{
     width: 340px;
     height: 181px;
     background-color: red;
@@ -89,7 +89,7 @@ body li{
     width: 73%;
 }
 
-body ul{
+.lista-quizz{
     display: flex;
     flex-wrap: wrap;
 }
@@ -108,6 +108,96 @@ ion-icon{
 .seus-quizes{
     margin-top:90px;
 }
+.titulo-quizz{
+    width: 100%;
+    margin-top: 17px;
+    height: 227px;
+    background-color: green;
+}
+.titulo-pergunta{
+    width: 90%;
+    height: 89px;
+    background-color: #434CA0;
+    margin-top: 40px;
+    font-size: 19px;
+    font-weight: bold;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.respostas-unica{
+    width: 90%;
+    height: 300px;
+    background-color: palevioletred;
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.respostas-unica li{
+    width: 40%;
+    height: 135px;
+    background-color: white;
+    margin-left: 18px;
+    margin-right: 10px;
+}
+.resultado-quizz{
+    width: 90%;
+    word-break: break-word;
+}
+
+.resultado-quizz > span{
+        width: 100%;
+        height: 99px;
+        background-color: #EC362D;
+        margin-top: 40px;
+        font-size: 19px;
+        font-weight: bold;
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 10px;
+}
+.resultado-quizz > img{
+    width: 100%;
+    height: 255px;
+}
+.resultado-quizz > p{
+    margin-top: 10px;
+    font-size: 17px;
+    color: #484848;
+    font-weight: bold;
+
+}
+.voltar-home{
+    width: 220px;
+    font-weight: 400;
+    margin-top: 15px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #818181;
+    margin-bottom: 55px;
+}
+.reiniciar-quizz{
+    width: 230px;
+    height: 50px;
+    margin-top: 60px;
+    background-color: #EC362D;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF5F4;
+    font-size:18px;
+    font-weight: 400;
+}
+
 @media(max-width:1100px){
     .criar-quiz{
         width: 90%;
@@ -116,7 +206,7 @@ ion-icon{
         width: 90%;
     }
     
-    body ul{
+    .lista-quizz {
         justify-content: center;
         flex-direction: column;
         align-items: center;
@@ -124,7 +214,7 @@ ion-icon{
     body > span{
         width: 90%;
     }
-    body li{
+    .lista-quizz li{
         width: 325px;
         margin-left: 0px;
         margin-right: 0px;
@@ -139,6 +229,9 @@ ion-icon{
     .seus-quizes{
         width: 90%;
         font-size: 20px;
+    }
+    .titulo-quizz{
+        height: 142px;
     }
 }
 .escondido{
