@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos/reset.css">
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/styletela3.css">
     <title>BuzzQuizz</title>
 </head>
 <body>
@@ -78,8 +79,60 @@
         <span>Reiniciar Quizz</span>
     </div>
 
-    <span class="voltar-home">Voltar pra home</span>
+
+
     
+	<!-- tela 3  vqv -->
+	<section class="screen-3 escondido">
+		<!-- create question form-->
+		<div class="screen3-1 ">
+			<section class="form info-quizz">
+				<h1>Comece pela começo</h1>
+				<form action="">
+					<input type="text" placeholder="Título do seu quizz" class="quizz-title">
+					<input type="text" placeholder="URL da imagem do seu quizz" class="quizz-image-url">
+					<input type="text" placeholder="Quantidade de perguntas do seu quizz" class="quizz-qty-questions">
+					<input type="text" placeholder="Quantidade de níveis do quizz" class="quizz-level">
+				</form>
+				<button class="next create-question" onclick="saveQuizzInfoBasics()">Prosseguir para criar
+					perguntas</button>
+			</section>
+		</div>
+		<!-- create question form-->
+
+		<!-- create question answers form-->
+		<div class="screen3-2 escondido">
+			<section class="form questions-quizz"> </section>
+		</div>
+		<!-- create question answers form-->
+
+		<!-- create question level form-->
+		<div class="screen3-3 escondido">
+			<section class="form level-quizz">
+			</section>
+		</div>
+		<!-- create question level form-->
+
+		<!-- quizz is ready screen -->
+		<div class="screen3-4 escondido">
+			<section class="quiz-is-ready">
+				<h1>Seu quizz está pronto!</h1>
+				<img src="assets/image-test.jpg" alt="test">
+				<div class="buttons">
+					<button class="acess-quizz">Acessar Quizz</button>
+					<a href="#">Voltar para home</a>
+				</div>
+			</section>
+		</div>
+		<!-- quizz is ready screen -->
+	</section>
+
+
+	<!-- Fim tela 3 -->
+
+
+    <span class="voltar-home">Voltar pra home</span>
+    <script src="scripts/tela3.js"></script>
     <script src="scripts/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
