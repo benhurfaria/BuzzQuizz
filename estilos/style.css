@@ -141,8 +141,8 @@ ion-icon{
     width: 40%;
     height: 135px;
     background-color: white;
-    margin-left: 18px;
-    margin-right: 10px;
+    margin-left: 40px;
+    margin-right: 20px;
 }
 .resultado-quizz{
     width: 50%;
@@ -220,6 +220,10 @@ ion-icon{
     }
     .respostas-unica{
         width: 90%;
+    }
+    .respostas-unica li{
+        margin-left: 18px;
+        margin-right: 10px;
     }
     .resultado-quizz{
         width: 90%;
