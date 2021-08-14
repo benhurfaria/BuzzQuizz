@@ -1,6 +1,7 @@
 
 .screen-3 {
 	margin-top: 130px;
+	width: 50%;
 }
 
 .screen-3 button {
@@ -31,7 +32,7 @@
 }
 
 .screen-3 .info-quizz form {
-	width: 600px;
+	width: 80%;
 	height: 256px;
 	margin-top: 27px;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
@@ -128,7 +129,7 @@
 }
 
 .screen-3 .level-quizz section.level-toggle {
-	width: 601px;
+	width: 50%;
 	height: 74px;
 	padding: 0 17px;
 	margin-top: 30px;
@@ -143,7 +144,7 @@
 }
 
 .screen-3 .level-quizz form {
-	width: 600px;
+	width: 50%;
 	height: 316px;
 	margin-top: 27px;
 	padding-top: 27px;
@@ -208,16 +209,17 @@
 }
 
 	.screen-3 {
-		width: 100vw;
+		width: 90%;
 		margin-top: 106px;
 	}
 
 	.screen-3 h1 {
-		margin-top: 0;
+		margin-top: 20px;
 	}
 
 	.screen-3 form input {
-		width: 341px;
+		width: 50%;
+		outline: none;
 	}
 
 	.screen-3 .info-quizz button.create-question {
@@ -231,7 +233,7 @@
 	}
 
 	.screen-3 .questions-quizz section.question-toggle {
-		width: 100vw;
+		width: 50%;
 	}
 
 	.screen-3 .questions-quizz button.create-level {
@@ -240,10 +242,16 @@
 	}
 
 	.screen-3 .level-quizz section.level-toggle {
-		width: 100vw;
+		width: 50%;
 	}
 
 	.screen-3 .quiz-is-ready img {
 		width: 340px;
 		height: 181px;
 	}
+@media(max-width:1100px){
+	.screen-3 form input {
+		width: 100%;
+		outline: none;
+	}
+}
