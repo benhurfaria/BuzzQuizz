@@ -215,7 +215,7 @@ function renderLevelConfigSection() {
         `
     }
 
-    levelsQuizz.innerHTML += `<button class="next submit-quizz" onclick="getAllLevelsInfo()">Finalizar Quizz</button>`
+    levelsQuizz.innerHTML += `<button class="next submit-quizz escondido" onclick="getAllLevelsInfo()">Finalizar Quizz</button>`
 }
 renderLevelConfigSection();
 function openLevelForm(element) {

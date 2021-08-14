@@ -49,7 +49,7 @@ body{
     justify-content: center;
     margin-bottom: 10px;
 }
-body > span{
+span{
     width: 70%;
     font-weight: bold;
     margin-top: 35px;
