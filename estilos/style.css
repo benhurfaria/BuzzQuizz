@@ -237,7 +237,7 @@ ion-icon{
         flex-direction: column;
         align-items: center;
     }
-    body > span{
+    body span{
         width: 90%;
     }
     .lista-quizz li{
