@@ -7,6 +7,7 @@ function pegarQuizzes(){
 pegarQuizzes();
 function CarregarQuizz(resposta){
     quizzes = resposta.data;
+    console.log(quizzes);
     renderizarQuizzes();
 }
 
@@ -17,6 +18,7 @@ function renderizarQuizzes(){
         console.log(quizzes[i].image);
         divQuizzes.innerHTML += `<li>
             <img src="${quizzes[i].image}"/>
+            <span>${quizzes[i].title}</span>
         </li>`;
     }
 }

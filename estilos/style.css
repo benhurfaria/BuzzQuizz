@@ -21,12 +21,10 @@ body{
     position: fixed;
     top:0;
     left:0;
+    z-index: 5;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-li img{
-    width: 100%;
-    height: 100%;
-}
+
 .barra-topo span{
     margin-top: 0px;
 }
@@ -91,6 +89,7 @@ span{
     border-radius: 5px;
     margin-left: 25px;
     margin-right: 15px;
+    position: relative;
 }
 .seus-quizes{
     width: 73%;
@@ -273,4 +272,19 @@ ion-icon{
 }
 .escondido{
     display: none;
+}
+li img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+li span{
+    position:absolute;
+    left: 30px;
+    bottom: 20px;
+    color:#FFFFFF;
+    font-size:19px;
+    font-weight: normal;
+    z-index: 2;
 }
