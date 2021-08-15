@@ -287,4 +287,5 @@ li span{
     font-size:19px;
     font-weight: normal;
     z-index: 2;
+    word-break: break-word;
 }
