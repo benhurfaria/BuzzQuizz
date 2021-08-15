@@ -220,6 +220,7 @@
 	.screen-3 form input {
 		width: 50%;
 		outline: none;
+		border-radius: 5px;
 	}
 
 	.screen-3 .info-quizz button.create-question {
