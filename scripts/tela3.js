@@ -1,4 +1,5 @@
 let quizz = {}
+let userQuizzess = []
 let idQuizz;
 let numQuestionsRender;
 let numLevelsRender;
@@ -38,7 +39,6 @@ const saveQuizzInfoBasics = () => {
             questions: [],
             levels: []
         }
-        console.log(quizz);
     }
 }
 
@@ -145,7 +145,7 @@ const questionInfo = (question) => {
         (qCorrectAnswer === '' || qIncorrectAnswer1 === '' || (haveAnswer3 === true && qIncorrectAnswer2 === '') || (haveAnswer4 === true && qIncorrectAnswer3 === '')) ||
         (validateURL(qCorrectAnswerURLImage) === false || (validateURL(qIncorrectAnswer1_URLImage) === false) || (haveAnswer3 === true && validateURL(qIncorrectAnswer2_URLImage) === false) || (haveAnswer4 === true && validateURL(qIncorrectAnswer3_URLImage) === false)) 
     ) {
-        alert("falhou!!! Insira informações Válidas");
+        alert("Campos inválidos! Por favor, insira novamente os dados das perguntas")
     }
      
     else {
@@ -187,8 +187,7 @@ const questionInfo = (question) => {
         if (haveAnswer3 === false && haveAnswer4 === false) {
             answers.push(answer1, answer2);
         }
-        
-    
+
         const objQuestion = {
             title: qTitle,
             color: qColor,
@@ -203,9 +202,14 @@ const questionInfo = (question) => {
 const getAllQuestionsInfo = () => {
     for(let i=0; i<numQuestionsRender; i++) {
         questionInfo(i+1);
-        console.log(quizz)
     }
-    nextPage(2,3)
+
+    if(quizz.questions.length < numQuestionsRender) {
+        quizz.questions = []
+        alert("Campos inválidos! Por favor, insira novamente os dados das perguntas");
+    } else {
+        nextPage(2,3);
+    }
 }
 
 const renderLevelConfigSection = () => {
@@ -267,7 +271,7 @@ const levelInfo = (level) => {
         (validateURL(lURlImage) === false) ||
         (lText.length < 30) )
         {
-            alert("falhou!!! Informações inválidas");
+            alert("Campos inválidos! Por favor, insira novamente os dados dos níveis");
         }
 
     else {
@@ -286,20 +290,33 @@ const getAllLevelsInfo = () => {
   
     for(let i=0; i<numLevelsRender; i++) {
         levelInfo(i+1);
-        console.log(quizz); 
     }
 
-    sendQuizzToServer();
+    if(quizz.levels.length < numLevelsRender) {
+        quizz.levels = []
+        alert("Campos inválidos! Por favor, insira novamente os dados dos níveis");
+    } else {
+        sendQuizzToServer();
+    }
+
+    
 }
 
 // tela 4
 const renderQuizzImage = () => {
-    console.log(document.querySelector(".quiz-is-ready img"))
     document.querySelector(".quiz-is-ready img").src = quizz.image
 }
 
-const sendQuizzToServer = () => {
+const saveQuizzToLocalStorage = (quizz) => {
     
+    userQuizzess.push(quizz);
+    const quizzJSON = JSON.stringify(userQuizzess);
+    
+    localStorage.setItem("userQuizzess", quizzJSON);
+}
+
+const sendQuizzToServer = () => {
+        
     axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v3/buzzquizz/quizzes", quizz)
         .then((response) => {
             idQuizz = response.data.id;
@@ -312,16 +329,11 @@ const sendQuizzToServer = () => {
         });
 }
 
-const saveQuizzToLocalStorage = (quizz) => {
-    
-    userQuizzes.push(quizz);
-    const quizzJSON = JSON.stringify(userQuizzes);
-    
-    localStorage.setItem("userQuizzes", quizzJSON);
-}
-
 const backToHome = () => {
-   window.location.reload();
+    document.querySelector(".screen-1").classList.remove("escondido");
+    document.querySelector(".screen-3").classList.add("escondido");
+
+    nextPage(4,1);
 }
 
 const accessQuizz = () => {
