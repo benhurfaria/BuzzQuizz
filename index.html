@@ -17,42 +17,31 @@
         <span>BuzzQuizz</span>
     </div>
     
-    <div class="criar-quiz ">
-        <span>Você não criou nenhum quizz ainda :(</span>
-        <div class="botao-criar-quiz" onclick="criarQuiz()">Criar Quizz</div>
-    </div>
-
-    <div class="seus-quizes escondido">
-        <div class="mini-menu">
-            <span>Seus Quizzes</span>
-            <ion-icon name="add-circle"></ion-icon>
+        <div class="criar-quiz ">
+            <span>Você não criou nenhum quizz ainda :(</span>
+            <div class="botao-criar-quiz" onclick="criarQuiz()">Criar Quizz</div>
         </div>
-        <ul class="lista-quizz">
-            <li></li>
-            <li></li>
-          
-        </ul>
-    </div>
 
-    <span class="Todos">Todos os Quizzes</span>
+        <div class="seus-quizes escondido">
+            <div class="mini-menu">
+                <span>Seus Quizzes</span>
+                <ion-icon name="add-circle"></ion-icon>
+            </div>
 
-    <div class="todos-os-quizes ">
-        <ul class="lista-quizz">
+            <ul class="lista-quizz">
+                <li></li>
+                <li></li>
             
-        </ul>
-     </div>
+            </ul>
+        </div>
+
+        <span class="Todos">Todos os Quizzes</span>
+
+        <div class="todos-os-quizes ">
+            <ul class="lista-quizz">
+            </ul>
+        </div>
     
-
-
-
-
-
-
-
-
-
-
-
     <div class="titulo-quizz escondido">
         
     </div>
@@ -84,7 +73,7 @@
 
 
     
-	<!-- tela 3  vqv -->
+	<!-- tela 3 -->
 	<section class="screen-3 escondido">
 		<!-- create question form-->
 		<div class="screen3-1 ">
@@ -96,20 +85,19 @@
 					<input type="text" placeholder="Quantidade de perguntas do seu quizz" class="quizz-qty-questions">
 					<input type="text" placeholder="Quantidade de níveis do quizz" class="quizz-level">
 				</form>
-				<button class="next create-question" onclick="saveQuizzInfoBasics()">Prosseguir para criar
-					perguntas</button>
+				<button class="next create-question" onclick="saveQuizzInfoBasics()">Prosseguir para criar perguntas</button>
 			</section>
 		</div>
 		<!-- create question form-->
 
 		<!-- create question answers form-->
-		<div class="screen3-2 ">
+		<div class="screen3-2 escondido">
 			<section class="form questions-quizz"> </section>
 		</div>
 		<!-- create question answers form-->
 
 		<!-- create question level form-->
-		<div class="screen3-3 ">
+		<div class="screen3-3 escondido">
 			<section class="form level-quizz">
 			</section>
 		</div>
@@ -118,26 +106,21 @@
 		<!-- quizz is ready screen -->
 		<div class="screen3-4 escondido">
 			<section class="quiz-is-ready">
-				<h1 class="">Seu quizz está pronto!</h1>
-				<img src="assets/image-test.jpg" alt="test">
+				<h1>Seu quizz está pronto!</h1>
+				<img src="img/image-test.jpg" alt="test">
 				<div class="buttons">
-					<button class="acess-quizz">Acessar Quizz</button>
-					<a href="#">Voltar para home</a>
+					<button onclick="accessQuizz()" class="acess-quizz">Acessar Quizz</button>
+					<a onclick="backToHome()" href="#">Voltar para home</a>
 				</div>
 			</section>
 		</div>
-		<!-- quizz is ready screen -->
-	</section>
-
-
-	<!-- Fim tela 3 -->
+		<!-- tela 3 final -->
 
 
     <span class="voltar-home escondido">Voltar pra home</span>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="scripts/tela3.js"></script>
     <script src="scripts/script.js"></script>
-    <script src="scripts/script2.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
 </body>
