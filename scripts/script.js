@@ -16,7 +16,7 @@ function renderizarQuizzes(){
     divQuizzes.innerHTML = "";
     for(let i=0; i < quizzes.length; i++){
         console.log(quizzes[i].image);
-        divQuizzes.innerHTML += `<li>
+        divQuizzes.innerHTML += `<li onclick="irParaQuiz()">
             <img src="${quizzes[i].image}"/>
             <span>${quizzes[i].title}</span>
         </li>`;
