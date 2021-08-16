@@ -77,7 +77,7 @@ span{
    cursor: pointer;
 }
 .todos-os-quizes{
-    width:73%;
+    width:70%;
     display:flex;
     flex-direction: column;
     margin-bottom: 30px;
@@ -92,7 +92,7 @@ span{
     position: relative;
 }
 .seus-quizes{
-    width: 73%;
+    width: 70%;
 }
 
 .lista-quizz{
@@ -118,7 +118,7 @@ ion-icon{
     width: 100%;
     margin-top: 17px;
     height: 227px;
-    background-color: green;
+
 }
 .titulo-pergunta{
     width: 50%;
@@ -216,10 +216,10 @@ ion-icon{
 
 @media(max-width:1100px){
     .criar-quiz{
-        width: 90%;
+        width: 300px;
     }
     .todos-os-quizes{
-        width: 90%;
+        width: 83%;
     }
     .titulo-pergunta{
         width:90%;
@@ -243,13 +243,14 @@ ion-icon{
         flex-direction: column;
         align-items: center;
     }
-    body > span{
-        width: 90%;
+    .Todos{
+        width: 83%;
     }
     .lista-quizz li{
-        width: 325px;
+        width: 300px;
         margin-left: 0px;
         margin-right: 0px;
+
     }
     .mini-menu{
         width: 100%;
