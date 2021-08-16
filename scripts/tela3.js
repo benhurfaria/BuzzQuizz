@@ -29,7 +29,7 @@ const saveQuizzInfoBasics = () => {
     numLevelsRender = levels;
 
     if( (title.length < 20 || title.length > 65) || validateURL(urlImage) === false || (qtyQuestions < 3) || (levels < 2) ) {
-        alert("Erro!")
+        alert("Falhou!")
     } else {
         renderCreateQuestionsSection();        
         quizz = {
@@ -145,7 +145,7 @@ const questionInfo = (question) => {
         (qCorrectAnswer === '' || qIncorrectAnswer1 === '' || (haveAnswer3 === true && qIncorrectAnswer2 === '') || (haveAnswer4 === true && qIncorrectAnswer3 === '')) ||
         (validateURL(qCorrectAnswerURLImage) === false || (validateURL(qIncorrectAnswer1_URLImage) === false) || (haveAnswer3 === true && validateURL(qIncorrectAnswer2_URLImage) === false) || (haveAnswer4 === true && validateURL(qIncorrectAnswer3_URLImage) === false)) 
     ) {
-        alert("falhou!!!");
+        alert("falhou!!! Insira informações Válidas");
     }
      
     else {
@@ -267,7 +267,7 @@ const levelInfo = (level) => {
         (validateURL(lURlImage) === false) ||
         (lText.length < 30) )
         {
-            alert("falhou!!!");
+            alert("falhou!!! Informações inválidas");
         }
 
     else {
@@ -300,20 +300,24 @@ const renderQuizzImage = () => {
 
 const sendQuizzToServer = () => {
     
-    userQuizzes.push(quizz);
-    const quizzJSON = JSON.stringify(userQuizzes);
-    
-    localStorage.setItem("userQuizzes", quizzJSON);
-
     axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v3/buzzquizz/quizzes", quizz)
         .then((response) => {
             idQuizz = response.data.id;
+            saveQuizzToLocalStorage(response.data);
             renderQuizzImage();
             nextPage(3,4);
         })
         .catch(err => {
             console.log(err);
         });
+}
+
+const saveQuizzToLocalStorage = (quizz) => {
+    
+    userQuizzes.push(quizz);
+    const quizzJSON = JSON.stringify(userQuizzes);
+    
+    localStorage.setItem("userQuizzes", quizzJSON);
 }
 
 const backToHome = () => {
